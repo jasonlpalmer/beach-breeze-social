@@ -1,0 +1,168 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'>
+  <defs>
+    <linearGradient id='bg' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' style='stop-color:#0B1D2E'/>
+      <stop offset='100%' style='stop-color:#0A1628'/>
+    </linearGradient>
+    <linearGradient id='ocean' x1='0%' y1='0%' x2='100%' y2='0%'>
+      <stop offset='0%' style='stop-color:#2DD4BF'/>
+      <stop offset='100%' style='stop-color:#06B6D4'/>
+    </linearGradient>
+    <linearGradient id='sand' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' style='stop-color:#F5D07A'/>
+      <stop offset='100%' style='stop-color:#D4A853'/>
+    </linearGradient>
+    <linearGradient id='sunset' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' style='stop-color:#F97316'/>
+      <stop offset='50%' style='stop-color:#FB923C'/>
+      <stop offset='100%' style='stop-color:#FCD34D'/>
+    </linearGradient>
+    <linearGradient id='surfboard' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' style='stop-color:#14B8A6'/>
+      <stop offset='100%' style='stop-color:#0D9488'/>
+    </linearGradient>
+    <linearGradient id='fur' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' style='stop-color:#C4956A'/>
+      <stop offset='100%' style='stop-color:#A67B5B'/>
+    </linearGradient>
+    <clipPath id='circle-clip'>
+      <circle cx='200' cy='200' r='165'/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width='400' height='400' rx='40' fill='url(#bg)'/>
+
+  <!-- Outer circle border -->
+  <circle cx='200' cy='200' r='170' fill='none' stroke='#2DD4BF' stroke-width='3' opacity='0.4'/>
+  <circle cx='200' cy='200' r='165' fill='none' stroke='#D4A853' stroke-width='2' opacity='0.6'/>
+
+  <!-- Inner scene - clipped to circle -->
+  <g clip-path='url(#circle-clip)'>
+    <!-- Sky gradient background -->
+    <rect x='35' y='35' width='330' height='330' fill='#0F2A3F'/>
+
+    <!-- Sunset glow -->
+    <ellipse cx='200' cy='260' rx='170' ry='100' fill='#1A3A50' opacity='0.8'/>
+    <circle cx='200' cy='170' r='45' fill='#F97316' opacity='0.15'/>
+
+    <!-- Sun -->
+    <circle cx='200' cy='140' r='30' fill='#FCD34D' opacity='0.9'/>
+    <circle cx='200' cy='140' r='25' fill='#FBBF24'/>
+
+    <!-- Palm tree left -->
+    <g transform='translate(75, 80)'>
+      <path d='M22 180 Q24 100 28 50' stroke='#6B4C2A' stroke-width='6' fill='none' stroke-linecap='round'/>
+      <path d='M28 55 C10 35 -10 40 -25 60' stroke='#0D9488' stroke-width='4' fill='none' stroke-linecap='round'/>
+      <path d='M28 50 C45 25 60 30 75 50' stroke='#14B8A6' stroke-width='4' fill='none' stroke-linecap='round'/>
+      <path d='M28 48 C15 25 22 10 40 5' stroke='#0F766E' stroke-width='4' fill='none' stroke-linecap='round'/>
+      <path d='M28 52 C5 40 -5 25 -10 15' stroke='#14B8A6' stroke-width='3' fill='none' stroke-linecap='round'/>
+    </g>
+
+    <!-- Palm tree right -->
+    <g transform='translate(280, 90)'>
+      <path d='M18 170 Q16 95 14 45' stroke='#6B4C2A' stroke-width='5' fill='none' stroke-linecap='round'/>
+      <path d='M14 50 C30 30 50 35 60 55' stroke='#14B8A6' stroke-width='3.5' fill='none' stroke-linecap='round'/>
+      <path d='M14 45 C0 20 -15 25 -30 45' stroke='#0D9488' stroke-width='3.5' fill='none' stroke-linecap='round'/>
+      <path d='M14 47 C25 25 18 10 5 5' stroke='#14B8A6' stroke-width='3' fill='none' stroke-linecap='round'/>
+    </g>
+
+    <!-- Ocean/waves background -->
+    <rect x='35' y='265' width='330' height='100' fill='#0E7490' opacity='0.3'/>
+
+    <!-- Beach sand -->
+    <ellipse cx='200' cy='310' rx='180' ry='40' fill='#D4A853' opacity='0.25'/>
+
+    <!-- Surfboard (behind dog) -->
+    <g transform='translate(255, 140) rotate(15)'>
+      <ellipse cx='0' cy='0' rx='12' ry='70' fill='url(#surfboard)' stroke='#0D9488' stroke-width='1'/>
+      <line x1='0' y1='-65' x2='0' y2='65' stroke='#FCD34D' stroke-width='1.5' opacity='0.6'/>
+      <ellipse cx='0' cy='-55' rx='5' ry='5' fill='#FCD34D' opacity='0.5'/>
+    </g>
+
+    <!-- Boxer Dog -->
+    <g transform='translate(200, 210)'>
+      <!-- Body -->
+      <ellipse cx='0' cy='30' rx='45' ry='35' fill='#B8865A'/>
+      <ellipse cx='0' cy='30' rx='42' ry='32' fill='url(#fur)'/>
+
+      <!-- White chest patch -->
+      <ellipse cx='0' cy='35' rx='22' ry='20' fill='#E8D5C0'/>
+
+      <!-- Head -->
+      <ellipse cx='0' cy='-15' rx='38' ry='35' fill='#B8865A'/>
+      <ellipse cx='0' cy='-15' rx='36' ry='33' fill='url(#fur)'/>
+
+      <!-- Dark muzzle mask -->
+      <ellipse cx='0' cy='-3' rx='22' ry='18' fill='#5C3D2E'/>
+
+      <!-- Muzzle/jowls -->
+      <ellipse cx='-8' cy='3' rx='12' ry='10' fill='#D4A87A'/>
+      <ellipse cx='8' cy='3' rx='12' ry='10' fill='#D4A87A'/>
+
+      <!-- Nose -->
+      <ellipse cx='0' cy='-2' rx='7' ry='5' fill='#2C1810'/>
+      <ellipse cx='-2' cy='-3' rx='2' ry='1.5' fill='#4A3028' opacity='0.6'/>
+
+      <!-- Mouth line -->
+      <path d='M-5 4 Q0 8 5 4' fill='none' stroke='#2C1810' stroke-width='1.5' stroke-linecap='round'/>
+
+      <!-- Sunglasses -->
+      <g transform='translate(0, -20)'>
+        <!-- Bridge -->
+        <path d='M-8 0 Q0 -3 8 0' fill='none' stroke='#1a1a1a' stroke-width='2.5'/>
+        <!-- Left lens -->
+        <ellipse cx='-17' cy='0' rx='14' ry='10' fill='#1a1a1a' stroke='#333' stroke-width='1.5'/>
+        <!-- Right lens -->
+        <ellipse cx='17' cy='0' rx='14' ry='10' fill='#1a1a1a' stroke='#333' stroke-width='1.5'/>
+        <!-- Lens shine -->
+        <ellipse cx='-12' cy='-3' rx='5' ry='3' fill='#2DD4BF' opacity='0.3'/>
+        <ellipse cx='12' cy='-3' rx='5' ry='3' fill='#2DD4BF' opacity='0.3'/>
+        <!-- Arms -->
+        <line x1='-31' y1='0' x2='-38' y2='5' stroke='#1a1a1a' stroke-width='2' stroke-linecap='round'/>
+        <line x1='31' y1='0' x2='38' y2='5' stroke='#1a1a1a' stroke-width='2' stroke-linecap='round'/>
+      </g>
+
+      <!-- Ears -->
+      <path d='M-28 -30 Q-38 -55 -25 -45 Q-20 -38 -22 -28' fill='#8B6142'/>
+      <path d='M28 -30 Q38 -55 25 -45 Q20 -38 22 -28' fill='#8B6142'/>
+
+      <!-- Forehead line -->
+      <path d='M0 -45 Q0 -30 0 -20' stroke='#A07850' stroke-width='2' fill='none' opacity='0.4'/>
+
+      <!-- Paws -->
+      <ellipse cx='-25' cy='60' rx='12' ry='8' fill='#C4956A'/>
+      <ellipse cx='25' cy='60' rx='12' ry='8' fill='#C4956A'/>
+      <ellipse cx='-25' cy='62' rx='10' ry='5' fill='#E8D5C0'/>
+      <ellipse cx='25' cy='62' rx='10' ry='5' fill='#E8D5C0'/>
+    </g>
+
+    <!-- Waves in front -->
+    <path d='M35 290 Q70 278 105 290 Q140 302 175 290 Q210 278 245 290 Q280 302 315 290 Q350 278 365 285' fill='none' stroke='#2DD4BF' stroke-width='2.5' stroke-linecap='round' opacity='0.7'/>
+    <path d='M35 305 Q65 295 95 305 Q125 315 155 305 Q185 295 215 305 Q245 315 275 305 Q305 295 335 305 Q355 312 365 308' fill='none' stroke='#2DD4BF' stroke-width='2' stroke-linecap='round' opacity='0.4'/>
+  </g>
+
+  <!-- Circular text path -->
+  <defs>
+    <path id='textPathTop' d='M70 200 A130 130 0 0 1 330 200'/>
+    <path id='textPathBottom' d='M85 220 A120 120 0 0 0 315 220'/>
+  </defs>
+
+  <!-- Top text: BEACH BREEZE -->
+  <text font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#FCD34D' letter-spacing='6'>
+    <textPath href='#textPathTop' startOffset='50%' text-anchor='middle'>BEACH BREEZE</textPath>
+  </text>
+
+  <!-- Bottom text: BOXERS -->
+  <text font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#FCD34D' letter-spacing='8'>
+    <textPath href='#textPathBottom' startOffset='50%' text-anchor='middle'>BOXERS</textPath>
+  </text>
+
+  <!-- Decorative dots between text sections -->
+  <circle cx='68' cy='205' r='3' fill='#2DD4BF'/>
+  <circle cx='332' cy='205' r='3' fill='#2DD4BF'/>
+
+  <!-- Small stars -->
+  <circle cx='72' cy='195' r='2' fill='#FCD34D' opacity='0.6'/>
+  <circle cx='328' cy='195' r='2' fill='#FCD34D' opacity='0.6'/>
+</svg>
