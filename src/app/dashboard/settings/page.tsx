@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
-import { Key, Save, Facebook, Instagram, Music, Building2, Trash2 } from 'lucide-react';
+import { Key, Save, Facebook, Instagram, Music, Building2, Trash2, ExternalLink, Copy } from 'lucide-react';
 import Image from 'next/image';
 import {
   BrandContext,
@@ -243,25 +243,59 @@ export default function SettingsPage() {
         </div>
       </div>
 
-      {/* Platform Connections */}
+      {/* Platform Posting */}
       <div className="rounded-2xl bg-white p-6 shadow-sm">
-        <h3 className="mb-4 font-display font-bold text-deep-600">
-          Platform Connections
-        </h3>
-        <p className="mb-4 text-sm text-foam-300">
-          Direct posting integration coming soon. For now, use the copy feature
-          to paste content to each platform.
+        <div className="mb-4 flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-ocean-100">
+            <Copy size={20} className="text-ocean-600" />
+          </div>
+          <div>
+            <h3 className="font-display font-bold text-deep-600">
+              Post to Social Media
+            </h3>
+            <p className="text-xs text-foam-300">
+              Copy your content and post directly to each platform
+            </p>
+          </div>
+        </div>
+
+        <p className="mb-4 text-sm text-deep-600">
+          Create your content in the app, then use the one-click copy buttons on the preview to paste directly into each platform. Quick links below take you straight to where you need to go:
         </p>
 
         <div className="space-y-3">
           {[
-            { name: 'Facebook', icon: Facebook, color: '#1877F2' },
-            { name: 'Instagram', icon: Instagram, color: '#E4405F' },
-            { name: 'TikTok', icon: Music, color: '#000000' },
+            {
+              name: 'Facebook',
+              icon: Facebook,
+              color: '#1877F2',
+              bgColor: '#E7F3FF',
+              url: 'https://www.facebook.com/',
+              tip: 'Click "What\'s on your mind?" and paste your content',
+            },
+            {
+              name: 'Instagram',
+              icon: Instagram,
+              color: '#E4405F',
+              bgColor: '#FDEEF1',
+              url: 'https://www.instagram.com/',
+              tip: 'Tap the + button, add media, and paste your caption',
+            },
+            {
+              name: 'TikTok',
+              icon: Music,
+              color: '#000000',
+              bgColor: '#F0F0F0',
+              url: 'https://www.tiktok.com/upload',
+              tip: 'Upload your video and paste your caption & hashtags',
+            },
           ].map((platform) => (
-            <div
+            <a
               key={platform.name}
-              className="flex items-center justify-between rounded-xl border border-foam-200 p-4"
+              href={platform.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between rounded-xl border border-foam-200 p-4 transition-colors hover:bg-foam-50"
             >
               <div className="flex items-center gap-3">
                 <div
@@ -274,14 +308,18 @@ export default function SettingsPage() {
                   <p className="text-sm font-medium text-deep-600">
                     {platform.name}
                   </p>
-                  <p className="text-xs text-foam-300">Not connected</p>
+                  <p className="text-xs text-foam-300">{platform.tip}</p>
                 </div>
               </div>
-              <span className="rounded-full bg-sand-100 px-3 py-1 text-xs font-medium text-sand-500">
-                Coming Soon
-              </span>
-            </div>
+              <ExternalLink size={16} className="text-foam-300" />
+            </a>
           ))}
+        </div>
+
+        <div className="mt-4 rounded-xl bg-ocean-50 p-3">
+          <p className="text-xs text-ocean-700">
+            <span className="font-semibold">Tip:</span> Use the &quot;Show Preview&quot; button on the Create Post page to see your content exactly as it will appear on each platform, with one-click copy buttons right there.
+          </p>
         </div>
       </div>
     </div>
